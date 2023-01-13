@@ -1,0 +1,41 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    &__logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        &_text {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin-right: 1rem;
+
+
+        }
+
+        &_item {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    &__menu-icon {
+        display: none;
+        font-size: 2rem;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+}
