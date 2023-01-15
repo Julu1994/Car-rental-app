@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./index.scss";
+import Icon from "./logo";
 
 const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar__logo">
                 <Link className="navbar__logo_text" to="/">
-                    Quick Rent
+                    <Icon />
                 </Link>
             </div>
             <ul className="navbar__menu">

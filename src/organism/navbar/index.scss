@@ -3,6 +3,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    background: linear-gradient(90deg, rgba(11, 7, 68, 1) 0%, rgba(12, 12, 162, 1) 35%, rgba(17, 12, 103, 1) 69%);
+
 
     &__logo {
         font-size: 1.5rem;
@@ -10,7 +12,7 @@
 
         &_text {
             text-decoration: none;
-            color: #000;
+            color: rgb(255, 255, 255);
         }
     }
 
@@ -18,15 +20,17 @@
         display: flex;
         list-style: none;
 
+
         li {
             margin-right: 1rem;
+
 
 
         }
 
         &_item {
             text-decoration: none;
-            color: #000;
+            color: #fff;
         }
     }
 
