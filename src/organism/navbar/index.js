@@ -1,33 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Lk from "../../atom/link";
+import Li from "../../atom/list";
+import Ul from "../../molecules/UL";
 import "./index.scss";
-import Icon from "./logo";
 
 const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar__logo">
-                <Link className="navbar__logo_text" to="/">
-                    <Icon />
-                </Link>
+                <Lk cls="navbar__logo_text" children="Quick Rent" path="/" />
             </div>
-            <ul className="navbar__menu">
-                <li>
-                    <Link className="navbar__menu_item" to="/">
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link className="navbar__menu_item" to="/">
-                        About
-                    </Link>
-                </li>
-                <li>
-                    <Link className="navbar__menu_item" to="/">
-                        Contact
-                    </Link>
-                </li>
-            </ul>
+            <Ul cls="navbar__menu">
+                <Li>
+                    <Lk cls="navbar__menu_item" children="Home" path="/" />
+                </Li>
+                <Li>
+                    <Lk cls="navbar__menu_item" children="About" path="/" />
+                </Li>
+                <Li>
+                    <Lk cls="navbar__menu_item" children="Discover" path="/" />
+                </Li>
+                <Li>
+                    <Lk cls="navbar__menu_item" children="Contact" path="/" />
+                </Li>
+            </Ul>
+
             <div className="navbar__menu-icon">
                 <i className="fas fa-bars"></i>
             </div>
