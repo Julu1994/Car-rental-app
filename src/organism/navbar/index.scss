@@ -5,7 +5,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: linear-gradient(90deg, rgba(11, 7, 68, 1) 0%, rgba(12, 12, 162, 1) 35%, rgba(17, 12, 103, 1) 69%);
+    z-index: 2000;
+    //background: linear-gradient(90deg, rgba(11, 7, 68, 1) 0%, rgba(12, 12, 162, 1) 35%, rgba(17, 12, 103, 1) 69%);
 
 
     &__logo {
