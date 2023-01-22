@@ -1,9 +1,15 @@
+import ToggleButton from "../../atom/buttons/toggleButton";
 import Lk from "../../atom/link";
 import Li from "../../atom/list";
 import Ul from "../../molecules/UL";
 import "./index.scss";
 
-const navItem: string[] = ["Home", "About", "Discover", "Contact"];
+const navItem: { link: string; path: string }[] = [
+    { link: "Home", path: "/" },
+    { link: "About", path: "/about" },
+    { link: "Rent", path: "/rent" },
+    { link: "Contact", path: "/contact" },
+];
 
 const Navbar = () => {
     return (
@@ -13,13 +19,12 @@ const Navbar = () => {
             </div>
             <Ul cls="navbar__menu">
                 {navItem.map((item, index) => {
-                    //console.log(item);
                     return (
                         <Li key={index}>
                             <Lk
                                 cls="navbar__menu_item"
-                                children={item}
-                                path="/"
+                                children={item.link}
+                                path={item.path}
                             />
                         </Li>
                     );
@@ -27,7 +32,7 @@ const Navbar = () => {
             </Ul>
 
             <div className="navbar__menu-icon">
-                <i className="fas fa-bars"></i>
+                <ToggleButton />
             </div>
         </nav>
     );

@@ -27,7 +27,7 @@ const BlueBackground = styled.div`
     z-index: 1000;
     background: linear-gradient(
         180deg,
-        rgba(14, 9, 84, 1) 16%,
+        rgba(0, 9, 10) 16%,
         rgba(17, 12, 103, 0) 51%
     );
 `;
