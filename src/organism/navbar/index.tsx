@@ -1,5 +1,5 @@
 import ToggleButton from "../../atom/buttons/toggleButton";
-import Lk from "../../atom/link";
+import Lk from "../../atom/link/link";
 import Li from "../../atom/list";
 import Ul from "../../molecules/UL";
 import "./index.scss";
