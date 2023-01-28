@@ -2,17 +2,21 @@ import React from "react";
 import car from "../../assets/car.png";
 import styled from "styled-components";
 import img from "../../assets/bg.jpg";
+import CarCard from "../../molecules/Cards/carCard";
+import cardImage from "../../assets/bmw.jpg";
 
 const Container = styled.div`
-    transform: translateY(-18%);
     width: 100%;
     height: 70vh;
     background-image: url(${img});
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: -1;
+    background-color: red;
 `;
 const StyledImg = styled.img`
     position: absolute;
@@ -34,10 +38,13 @@ const BlueBackground = styled.div`
 
 const Home = () => {
     return (
-        <Container>
-            <BlueBackground />
-            <StyledImg src={car} alt="car" />
-        </Container>
+        <>
+            <Container>
+                <BlueBackground />
+                <StyledImg src={car} alt="car" />
+            </Container>
+            <CarCard bg={cardImage} />
+        </>
     );
 };
 
