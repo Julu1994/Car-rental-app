@@ -8,7 +8,6 @@ const navItem: { link: string; path: string }[] = [
     { link: "Home", path: "/" },
     { link: "About", path: "/about" },
     { link: "Rent", path: "/rent" },
-    { link: "Contact", path: "/contact" },
 ];
 
 const Navbar = () => {

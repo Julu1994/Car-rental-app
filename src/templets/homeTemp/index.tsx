@@ -2,27 +2,30 @@ import React from "react";
 import car from "../../assets/car.png";
 import styled from "styled-components";
 import img from "../../assets/bg.jpg";
-import CarCard from "../../molecules/Cards/carCard";
-import cardImage from "../../assets/bmw.jpg";
+import Preview from "../../organism/PreviewCars/preview";
+import Navbar from "../../organism/navbar";
 
-const Container = styled.div`
+const HeroContainer = styled.div`
     width: 100%;
     height: 70vh;
     background-image: url(${img});
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-color: red;
+    position: relative;
 `;
 const StyledImg = styled.img`
     position: absolute;
     top: 55%;
     left: 20%;
     transform: scale(1.2);
+
+    @media (max-width: 600px) {
+        transform: scale(1);
+        top: 80%;
+        left: 0;
+        width: 100%;
+    }
 `;
 const BlueBackground = styled.div`
     position: absolute;
@@ -36,16 +39,17 @@ const BlueBackground = styled.div`
     );
 `;
 
-const Home = () => {
+const HomePageTem = () => {
     return (
-        <>
-            <Container>
+        <div>
+            <HeroContainer>
+                <Navbar />
                 <BlueBackground />
                 <StyledImg src={car} alt="car" />
-            </Container>
-            <CarCard bg={cardImage} />
-        </>
+            </HeroContainer>
+            <Preview />
+        </div>
     );
 };
 
-export default Home;
+export default HomePageTem;

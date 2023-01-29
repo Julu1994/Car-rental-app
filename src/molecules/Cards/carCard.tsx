@@ -22,7 +22,7 @@ const Border = styled.div`
     border: 0.5px solid white;
     border-radius: 0.4rem;
 `;
-const CarCard: React.FC<Props> = ({ bg }) => {
+const Card: React.FC<Props> = ({ bg }) => {
     return (
         <Container bg={bg}>
             <Border>CarCard</Border>
@@ -30,4 +30,4 @@ const CarCard: React.FC<Props> = ({ bg }) => {
     );
 };
 
-export default CarCard;
+export default Card;
