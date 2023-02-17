@@ -1,7 +1,16 @@
 import React from "react";
+import styled from "styled-components";
 
-function Button() {
-    return <div>Button</div>;
-}
+const Li = styled.li`
+    width: 100%;
+`;
+
+const Button = () => {
+    return (
+        <div>
+            <Li>Car</Li>
+        </div>
+    );
+};
 
 export default Button;

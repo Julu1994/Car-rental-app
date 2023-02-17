@@ -2,8 +2,8 @@ import React from "react";
 import car from "../../assets/car.png";
 import styled from "styled-components";
 import img from "../../assets/bg.jpg";
-import Preview from "../../organism/PreviewCars/preview";
 import Navbar from "../../organism/navbar";
+import SearchBar from "../../organism/SearchBar/searchBar";
 
 const HeroContainer = styled.div`
     width: 100%;
@@ -47,7 +47,7 @@ const HomePageTem = () => {
                 <BlueBackground />
                 <StyledImg src={car} alt="car" />
             </HeroContainer>
-            <Preview />
+            <SearchBar />
         </div>
     );
 };

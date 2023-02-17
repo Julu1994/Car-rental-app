@@ -1,4 +1,4 @@
-import HomePageTem from "../../templets/homeTemp";
+import HomePageTem from "../../templets/homeTemplate/homePageTemplate";
 
 const Home = () => {
     return (
