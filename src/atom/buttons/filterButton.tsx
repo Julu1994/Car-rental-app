@@ -57,8 +57,8 @@ const TimeBtnContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 `;
+const Input = styled.input``;
 export const FilterButton = () => {
     const [carBtnBG, setCarBtnBG] = React.useState(true);
     const [vanBtnBG, setVanBtnBG] = React.useState(false);
@@ -112,31 +112,43 @@ export const FilterButton = () => {
 };
 
 export const DateBtn = () => {
-    const [dateRange, setDateRange] = React.useState([null, null]);
-    const [startDate] = dateRange;
-    //const [startDate, setStartDate] = React.useState(new Date());
-    //const handleChange = (value: any) => setStartDate(value);
+    const [startDate, setStartDate] = React.useState(null);
+    const [time, setTime] = React.useState("");
     const [isDateVisible, setIsDateVisible] = React.useState(false);
-    const Input = styled.input``;
+    const handleDateChange = (date: any) => {
+        setStartDate(date);
+        setTime(date.toLocaleTimeString());
+    };
+
     return (
         <Container width={"20%"} border={"#A9A9A9"}>
             <DateBtnContainer onClick={() => setIsDateVisible(!isDateVisible)}>
                 <DatePicker
-                    selectsRange={true}
-                    startDate={startDate}
+                    showTimeSelect
+                    selected={startDate}
                     customInput={<Input />}
-                    onChange={(update: any) => {
-                        setDateRange(update);
-                    }}
-                    dateFormat="dd MMM yyyy"
+                    onChange={handleDateChange}
                     placeholderText="Date"
                     className="date"
                 />
             </DateBtnContainer>
             <TimeBtnContainer>
-                <TextTypography color={"#A9A9A9"} fontSize={"1rem"}>
-                    {"Time"}
-                </TextTypography>
+                <DatePicker
+                    showTimeSelect
+                    selected={startDate}
+                    customInput={<Input />}
+                    onChange={handleDateChange}
+                    placeholderText="Time"
+                    className="date"
+                    showTimeSelectOnly
+                    timeIntervals={15}
+                    dateFormat="h:mm aa"
+                />
+                {/* <TextTypography
+                    color={!time ? "#A9A9A9" : "#000000"}
+                    fontSize={"1rem"}>
+                    {!time ? "Time" : time}
+                </TextTypography> */}
             </TimeBtnContainer>
         </Container>
     );
